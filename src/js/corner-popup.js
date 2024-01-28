@@ -11,7 +11,7 @@ if ("undefined" == typeof jQuery)
   throw new Error("Corner Popup requires jQuery");
 
 (function($) {
-  cornerpopup = function(options) {
+  jQuery.cornerpopup = function(options) {
     // Default plugin options
     // ----------------------
 
@@ -617,15 +617,15 @@ if ("undefined" == typeof jQuery)
       // Public functions
       // ----------------
 
-      cornerpopup.popupClose = function(timing) {
+      jQuery.cornerpopup.popupClose = function(timing) {
         setTimeout(popupClose, timing);
       };
 
-      cornerpopup.popupHide = function(timing) {
+      jQuery.cornerpopup.popupHide = function(timing) {
         $(cp).delay(timing).fadeOut(400);
       };
 
-      cornerpopup.popupShow = function(timing) {
+      jQuery.cornerpopup.popupShow = function(timing) {
         $(cp).delay(timing).fadeIn(800);
       };
     }
